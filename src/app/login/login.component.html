@@ -1,0 +1,25 @@
+
+<div class="login-body">
+  <div class="login-header">
+    <img id="logo" [attr.src]="'assets/images/logo.png'">
+    <p id="login-message">Log in to your account</p>
+    <p id="login-wb-message" >Welcome Back! Please enter your details.</p>
+  </div>
+  <form class="login-form" (ngSubmit)="onSubmit()" #submitForm="ngForm">
+    <div>
+      <div>
+        <label id="form-label" for="username">Username</label>
+        <input id="textBox" type="username" [(ngModel)]="form.username" name="username" placeholder="Enter your username" #username="ngModel" required>
+        <div class="invalid-info" *ngIf="username.invalid && (username.touched || username.dirty)" >Username must be Valid!</div>
+      </div>
+      <div>
+        <label id="form-label" for="password">Password</label>
+        <input id="textBox" type="password" [(ngModel)]="form.password" name="password" placeholder="********" #password="ngModel" required>
+        <div class="invalid-info" *ngIf="password.invalid && (password.touched || password.dirty)" >Password must be Valid!</div>
+      </div>
+    </div>
+    <button type="submit" id="form-btn" [disabled]="submitForm.form.invalid">Sign in</button>
+  </form>
+</div>
+
+

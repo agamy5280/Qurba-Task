@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Inter';
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    @media(max-width:960px){ 
+        max-width: 282px;
+    }
+}
+.grid {
+    display: grid;
+    grid-gap: 24px;
+    grid-template-columns: 282px 1fr;
+
+    @media(max-width:960px){ 
+        grid-template-columns: 1fr;
+    }
+}
+
+.filters {
+    border: 0.5px solid #424242;
+    max-height: 563px;
+    border-radius: 8px;
+    padding-left: 12px;
+    padding-top: 12px;
+    font-size: 16px;
+    strong {
+        display: block;
+        margin-bottom: 10px;
+    }
+    .filter-items {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 5px;
+    }
+    
+    
+}
+

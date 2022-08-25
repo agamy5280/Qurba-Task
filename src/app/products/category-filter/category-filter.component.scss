@@ -1,0 +1,17 @@
+*{
+    font-family: 'Inter';
+}
+
+.filter-item {
+    display: flex;
+    margin-bottom: 3px;
+    font-size: 16px;
+    label {
+        margin-left: 9px;
+    }
+    input{
+        display: block;
+        margin-right: 4px;
+        accent-color:#56D9D9;
+    }
+}

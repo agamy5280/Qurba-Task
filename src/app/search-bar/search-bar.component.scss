@@ -1,0 +1,15 @@
+#searchBar {
+    height: 32px;
+    width: 319px;
+    border: 0.5px solid #424242;
+    border-radius: 8px;
+    background-image: url('shapeSearch.png');
+    background-repeat: no-repeat;
+    background-size: 17px;
+    background-position: 11px;
+    text-indent: 34px;
+  }
+::placeholder {
+    color: #667085;
+    font-size: 14px;
+  }

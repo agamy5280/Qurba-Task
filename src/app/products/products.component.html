@@ -1,0 +1,14 @@
+<app-search-bar (searchTextChanged)="onSearchTextEntered($event)"></app-search-bar>
+<div class="container">
+  <app-breadcrumbs></app-breadcrumbs>
+  <div class="grid">
+    <div class="filters">
+      <strong>Products</strong>
+      <div class="filter-items">
+        <app-category-filter (emitter)="send($event)"></app-category-filter>
+      </div>
+    </div>
+      <app-products-grid [category]="category" [searchTXT]="searchText"></app-products-grid>
+  </div>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br>
