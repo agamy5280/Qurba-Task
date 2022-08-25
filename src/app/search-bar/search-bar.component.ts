@@ -22,5 +22,13 @@ export class SearchBarComponent implements OnInit {
     // this.enteredSearchValue = ''
     // this.searchTextChanged.emit(this.enteredSearchValue);
   }
+  emptySearchBar() {
+    if(this.enteredSearchValue == '') {
+      return
+    }else {
+      this.enteredSearchValue = ''
+      this.searchTextChanged.emit(this.enteredSearchValue);
+    }
+  }
   
 }

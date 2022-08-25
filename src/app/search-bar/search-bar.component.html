@@ -1,5 +1,5 @@
 <div>
-    <input id="searchBar" type="text" placeholder="Search" [(ngModel)]="enteredSearchValue" (keydown.enter)="onSearchTextChanged()">
+    <input id="searchBar" type="text" placeholder="Search" [(ngModel)]="enteredSearchValue" (keydown.enter)="onSearchTextChanged()" (blur)="emptySearchBar()">
 </div>
 
 <!-- keydown.enter -->
