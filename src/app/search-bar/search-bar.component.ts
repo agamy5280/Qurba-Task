@@ -8,19 +8,15 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 export class SearchBarComponent implements OnInit {
 
   enteredSearchValue: string = '';
-
   constructor() {
   }
   ngOnInit(): void {
   }
 
   @Output() searchTextChanged: EventEmitter<string> = new EventEmitter<string>();
-  
   onSearchTextChanged() {
     this.searchTextChanged.emit(this.enteredSearchValue);
     console.log("searchBarTXT:" + this.enteredSearchValue)
-    // this.enteredSearchValue = ''
-    // this.searchTextChanged.emit(this.enteredSearchValue);
   }
   emptySearchBar() {
     if(this.enteredSearchValue == '') {
@@ -30,5 +26,4 @@ export class SearchBarComponent implements OnInit {
       this.searchTextChanged.emit(this.enteredSearchValue);
     }
   }
-  
 }
