@@ -27,10 +27,8 @@ export class BreadcrumbsComponent implements OnInit {
       this.txt = this.searchTXT;
       await this.productService.getProductCategory(this.searchTXT).then(data => this.cat = '/' + ' ' + data['products'][0].category + ' ' + '/')
     } else {
-      this.cat = ''
-      this.txt = ''
+      this.txt = this.searchTXT;
+      await this.productService.getProductCategory(this.searchTXT).then(data => this.cat = '/' + ' ' + data['products'][0].category + ' ' + '/')
     } 
- 
   }
 }
-// await this.productService.getProductCategory(this.searchTXT).then(data => this.cat = data['products'][0].category)
