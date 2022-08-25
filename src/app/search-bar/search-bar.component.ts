@@ -9,7 +9,7 @@ export class SearchBarComponent implements OnInit {
 
   enteredSearchValue: string = '';
 
-  constructor() { 
+  constructor() {
   }
   ngOnInit(): void {
   }
@@ -19,5 +19,8 @@ export class SearchBarComponent implements OnInit {
   onSearchTextChanged() {
     this.searchTextChanged.emit(this.enteredSearchValue);
     console.log("searchBarTXT:" + this.enteredSearchValue)
+    // this.enteredSearchValue = ''
+    // this.searchTextChanged.emit(this.enteredSearchValue);
   }
+  
 }

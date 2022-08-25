@@ -17,9 +17,7 @@ export class ProductsGridComponent implements OnInit,OnChanges {
   }
  
  async ngOnChanges(): Promise<void> {
-  console.log("productgridsearch:"+this.searchTXT)
   await this.productService.getProducts(this.category, this.searchTXT).then(data => this.allProductList=data['products']);
   // await this.productService.getSearchedText(this.searchTXT).then(data => this.allProductList=data['products']);
-
 }
 }

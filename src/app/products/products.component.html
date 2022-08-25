@@ -1,6 +1,6 @@
 <app-search-bar (searchTextChanged)="onSearchTextEntered($event)"></app-search-bar>
 <div class="container">
-  <app-breadcrumbs></app-breadcrumbs>
+  <app-breadcrumbs [category]="category" [searchTXT]="searchText"></app-breadcrumbs>
   <div class="grid">
     <div class="filters">
       <strong>Products</strong>
