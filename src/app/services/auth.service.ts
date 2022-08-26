@@ -16,9 +16,6 @@ export class AuthService {
   login(form : loginForm){
     this.http.post('https://dummyjson.com/auth/login',form).subscribe({
       next: (data) => {
-        console.log("login good!");
-        alert("Login Successful");
-        console.log(data);
         this.dataInfo.push(data);
         this.isAuthenticated = true;
         this.router.navigateByUrl('/products');

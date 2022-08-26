@@ -17,6 +17,5 @@ export class ProductsComponent implements OnInit {
   }
   onSearchTextEntered(searchText: string) {
     this.searchText = searchText;
-    // console.log("this is product component search:" + this.searchText);
   }
 }

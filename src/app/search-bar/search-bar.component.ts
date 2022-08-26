@@ -16,7 +16,6 @@ export class SearchBarComponent implements OnInit {
   @Output() searchTextChanged: EventEmitter<string> = new EventEmitter<string>();
   onSearchTextChanged() {
     this.searchTextChanged.emit(this.enteredSearchValue);
-    console.log("searchBarTXT:" + this.enteredSearchValue)
   }
   emptySearchBar() {
     if(this.enteredSearchValue == '') {
