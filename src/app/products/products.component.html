@@ -1,4 +1,4 @@
-<app-search-bar (searchTextChanged)="onSearchTextEntered($event)"></app-search-bar>
+<app-search-bar class="searchBar" (searchTextChanged)="onSearchTextEntered($event)"></app-search-bar>
 <div class="container">
   <app-breadcrumbs [category]="category" [searchTXT]="searchText"></app-breadcrumbs>
   <div class="grid">
@@ -11,4 +11,4 @@
       <app-products-grid [category]="category" [searchTXT]="searchText"></app-products-grid>
   </div>
 </div>
-<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br>

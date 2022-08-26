@@ -1,28 +1,15 @@
-<!-- <div class="div-header">
-  <nav>
-    <img id="logo-img" [attr.src]="'assets/images/logo.png'" alt="">
-    <ul>
-      <li id="logo-name">ClickTik</li>
-      <li id="home-txt"><a href="#">Home</a></li>
-      <li><input [style.visibility]="removeBody" id="searchBar" type="text" placeholder="Search"></li>
-      <li> <a [style.visibility]="removeBody" href="#"><img id="cart" [attr.src]="'assets/images/Cart.png'" alt=""></a> </li>
-      <li id="loggingStatus"> <a (click)="isLoginClicked()" routerLink="login" *ngIf="!isLogin() || isLogin()">{{ loggingStatus }}</a></li>
-    </ul>
-  </nav>
-</div> -->
-<div class="a">
-    <div class="b">
-      <div class="c">
-        <img id="logo-img" [attr.src]="'assets/images/logo.png'" alt="">
-        <p>ClickTik</p>
-      </div>
-      <a href="#">Home</a>
+<nav>
+    <div class="logo">
+      <ol>
+        <li><img id="logo-img" [attr.src]="'assets/images/logo.png'" alt=""></li>
+        <li><strong id="logo-name">ClickTik</strong></li>
+        <li><a href="#">Home</a></li>
+      </ol>
     </div>
-    <div class="d">
-      <app-search-bar class="lol" [style.visibility]="!removeBody" ></app-search-bar>
-      <a [style.visibility]="!removeBody" href="#"><img id="cart" [attr.src]="'assets/images/Cart.png'" alt=""></a> 
-      <a (click)="isLoginClicked()" routerLink="login" *ngIf="!isLogin() || isLogin()">{{ loggingStatus }}</a>
-    </div>
-</div>
+    <ol>
+      <li><a [style.visibility]="!removeBody" href="#"><img id="cart" [attr.src]="'assets/images/Cart.png'" alt=""></a></li>
+      <a id="login" (click)="isLoginClicked()" routerLink="login" *ngIf="!isLogin() || isLogin()">{{ loggingStatus }}</a>
+    </ol>
+</nav>
 
 
