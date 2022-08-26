@@ -9,77 +9,84 @@
   text-align: center;
   font-family: 'Inter';
 
-  .login-header * ,.login-header{
+  .login-header *,
+  .login-header {
     margin-bottom: 24px;
+
     #logo {
-        width: 48px;
-        height: 48px;
-        border-radius: 12px;
-      }
-      #login-message{  
-        font-size: 30px;
-        color: #101828;
-        font-weight: bold;
-      }
-      #login-wb-message{
-        font-size: 16px;
-        color: #667085;
-      }
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+    }
+
+    #login-message {
+      font-size: 30px;
+      color: #101828;
+      font-weight: bold;
+    }
+
+    #login-wb-message {
+      font-size: 16px;
+      color: #667085;
+    }
   }
- 
 
   .login-form {
-        
-    #textBox{
-        width: 356px;
-        height: 32px;
-        border: 1px solid #D0D5DD;
-        border-radius: 8px;
-        margin-top: 6px;
-        margin-bottom: 20px;
+
+    #textBox {
+      width: 356px;
+      height: 32px;
+      border: 1px solid #D0D5DD;
+      border-radius: 8px;
+      margin-top: 6px;
+      margin-bottom: 20px;
     }
-    #form-label{
-        float: left;
-        font-size: 14px;
-        color: #344054;
+
+    #form-label {
+      float: left;
+      font-size: 14px;
+      color: #344054;
     }
-    #form-btn{
-        width: 356px;
-        height: 32px;
-        background-color: #56D9D9;
-        border: none;
-        border-radius: 8px; 
-        padding: 10px 1px;
-        color: #344054;
-        transition-duration: 0.4s;
-        cursor: pointer;
+
+    #form-btn {
+      width: 356px;
+      height: 32px;
+      background-color: #56D9D9;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 1px;
+      color: #344054;
+      transition-duration: 0.4s;
+      cursor: pointer;
     }
-    #form-btn:hover{
-        background-color: #4CAF50;
-        color: white;
+
+    #form-btn:hover {
+      background-color: #4CAF50;
+      color: white;
     }
-    input[type=username],input[type=password] {
-        width: 100%;
-        padding: 12px 20px;
-        box-sizing: border-box;
-      }
-      .invalid-info{
-        color: #C21010;
-        font-size: 13px;
-        margin-bottom: 10px;
-        border: none;
-        background-color: #FEE0C0;
-        padding: 10px 0;
-        border-radius: 10px;
-      }  
-    
+
+    input[type=username],
+    input[type=password] {
+      width: 100%;
+      padding: 12px 20px;
+      box-sizing: border-box;
+    }
+
+    .invalid-info {
+      color: #C21010;
+      font-size: 13px;
+      margin-bottom: 10px;
+      border: none;
+      background-color: #FEE0C0;
+      padding: 10px 0;
+      border-radius: 10px;
+    }
   }
+
   ::placeholder {
     font-family: 'Inter';
     color: #667085;
     font-size: 16px;
 
   }
-  
-  
 }

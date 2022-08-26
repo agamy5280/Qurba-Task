@@ -1,15 +1,14 @@
 <nav>
-    <div class="logo">
-      <ol>
-        <li><img id="logo-img" [attr.src]="'assets/images/logo.png'" alt=""></li>
-        <li><strong id="logo-name">ClickTik</strong></li>
-        <li><a href="#">Home</a></li>
-      </ol>
-    </div>
+  <div class="left-nav">
     <ol>
-      <li><a [style.visibility]="!removeBody" href="#"><img id="cart" [attr.src]="'assets/images/Cart.png'" alt=""></a></li>
-      <a id="login" (click)="isLoginClicked()" routerLink="login" *ngIf="!isLogin() || isLogin()">{{ loggingStatus }}</a>
+      <li><img id="logo-img" [attr.src]="'assets/images/logo.png'" alt=""></li>
+      <li><strong id="logo-name">ClickTik</strong></li>
+      <li><a href="#">Home</a></li>
     </ol>
+  </div>
+  <ol>
+    <li><a [style.visibility]="!removeBody" href="#"><img id="cart" [attr.src]="'assets/images/Cart.png'" alt=""></a>
+    </li>
+    <a id="login" (click)="isLoginClicked()" routerLink="login" *ngIf="!isLogin() || isLogin()">{{ loggingStatus }}</a>
+  </ol>
 </nav>
-
-

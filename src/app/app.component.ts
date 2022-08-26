@@ -12,17 +12,14 @@ import {
 
 export class AppComponent {
   title = 'Qurba-task';
-  constructor(private authService: AuthService) {
-  }
+  constructor(private authService: AuthService) {}
 
-  removeBody(){
-    if (this.authService.isLoginClicked==true){
+  // Function to remove welcome screen if user is authenticated
+  removeBody() {
+    if (this.authService.isLoginClicked == true) {
       return false;
-    }else{
+    } else {
       return true;
-    }  
+    }
   }
-
-  
-  
 }

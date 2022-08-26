@@ -1,8 +1,9 @@
 <app-header></app-header>
-    <div *ngIf="removeBody()">
-        <img id="logo" [attr.src]="'assets/images/logo.png'">
-        <h1>Welcome To ClickTik!</h1>
-        <h4>Please log in to view products.</h4>
-    </div>
+<!-- Welcome Screen -->
+<div *ngIf="removeBody()">
+  <img id="logo" [attr.src]="'assets/images/logo.png'">
+  <h1>Welcome To ClickTik!</h1>
+  <h4>Please log in to view products.</h4>
+</div>
 <router-outlet></router-outlet>
 <app-footer></app-footer>

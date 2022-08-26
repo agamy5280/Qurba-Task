@@ -1,5 +1,7 @@
+<!-- Using *ngFor to iterate through each category products or through all products  -->
 <div class="grid">
   <ng-container>
+                                                                       <!-- Pagination  -->
     <div class="col" *ngFor="let product of allProductList | paginate: { itemsPerPage:9, currentPage:p} ">
       <img class="img-product" src="{{ product.thumbnail }}" alt="">
       <div class="dc">
@@ -8,8 +10,8 @@
       <p id="product-title">{{ product.title }}</p>
       <p id="product-description">{{ product.description }}.</p>
       <div class="product-price">
-        <p> <span id="price-dc"><span style="font-weight:bold;">{{ product.price }} </span> <span>USD</span> </span> <span
-            style="font-weight:bold;">477.85 </span><span>USD</span></p>
+        <p> <span id="price-dc"><span style="font-weight:bold;">{{ product.price }} </span> <span>USD</span> </span>
+          <span style="font-weight:bold;">477.85 </span><span>USD</span></p>
       </div>
       <p class="product-details">Brand: <span style="font-weight:bold;">{{ product.brand }}</span></p>
       <p class="product-details">Category: <span style="font-weight:bold;">{{ product.category }}</span></p>
@@ -20,6 +22,8 @@
     </div>
   </ng-container>
 </div>
+<!-- Pagination Controls  -->
 <div class="pagination">
-  <pagination-controls class="my-pagination" (pageChange)="p = $event" previousLabel="" nextLabel=""> </pagination-controls>
+  <pagination-controls class="my-pagination" (pageChange)="p = $event" previousLabel="" nextLabel="">
+  </pagination-controls>
 </div>

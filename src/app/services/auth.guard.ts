@@ -10,7 +10,7 @@ export class AuthGuard implements CanActivate {
   constructor(private authService: AuthService){
   }
 
-
+  // Authenticating Routing Guard
   canActivate(){
     // return this.authService.isAuthenticated;
     return true;

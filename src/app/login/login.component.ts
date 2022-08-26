@@ -19,13 +19,11 @@ export class LoginComponent implements OnInit {
     username: '',
     password: '',
   }
-  
-
-  constructor (private authService: AuthService) { }
+  constructor (private authService: AuthService) {}
 
   ngOnInit(): void {
   }
-
+  // onSubmitting the form authenticate this form detalis given by the user
   onSubmit(){
     this.authService.login(this.form);
   }

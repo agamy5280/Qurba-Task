@@ -12,9 +12,11 @@ export class ProductsComponent implements OnInit {
   searchText: string = '';
   ngOnInit(): void {
   }
-  send(category){
+  // Function to receive category
+  receiveCategory(category){
     this.category=category;
   }
+  // Function to receive searched text from searchBar component
   onSearchTextEntered(searchText: string) {
     this.searchText = searchText;
   }

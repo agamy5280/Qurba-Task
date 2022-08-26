@@ -1,4 +1,4 @@
-*{
+* {
   font-family: 'Inter';
   font-size: 16px;
   box-sizing: border-box;
@@ -15,32 +15,38 @@ nav {
   padding-left: 112px;
   padding-right: 130px;
   border-bottom: 0.5px solid #667085;
-  .logo {
+
+  .left-nav {
     display: flex;
     margin: auto 0;
     line-height: 30px;
+
     #logo-img {
       width: 32px;
       height: 32px;
     }
+
     #logo-name {
       margin-right: 60px;
     }
   }
-    ol {
-      display: flex;
-      list-style: none;
-      margin: auto 0;
 
-        li {
-          margin: 0 9px;
-        }
-        #login {
-          line-height: 25px;
-          margin-left: 14px;
-        }
+  ol {
+    display: flex;
+    list-style: none;
+    margin: auto 0;
+
+    li {
+      margin: 0 9px;
     }
+
+    #login {
+      line-height: 25px;
+      margin-left: 14px;
+    }
+  }
 }
+
 a {
   text-decoration: none;
   color: #667085;

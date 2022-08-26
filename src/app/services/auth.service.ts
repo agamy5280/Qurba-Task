@@ -13,6 +13,7 @@ export class AuthService {
   
   constructor(private http: HttpClient, private router: Router ) { }
 
+    // Function that take form details provided by the user and send it to the Authentication API
   login(form : loginForm){
     this.http.post('https://dummyjson.com/auth/login',form).subscribe({
       next: (data) => {
@@ -26,6 +27,5 @@ export class AuthService {
         this.router.navigateByUrl('');
       }
     })
-    
   }
 }

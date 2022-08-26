@@ -115,12 +115,10 @@ button:hover {
     font-size: 20px;
   }
 
-  
 .my-pagination ::ng-deep  .pagination-next a::after, .my-pagination ::ng-deep .pagination-next.disabled::after{ 
     content: '>';
     font-size: 24px;
 }  
-  
   
 .my-pagination ::ng-deep .pagination-previous a::before, .my-pagination ::ng-deep .pagination-previous.disabled::before {
     content: '<';

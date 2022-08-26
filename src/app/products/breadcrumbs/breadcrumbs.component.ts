@@ -15,6 +15,7 @@ export class BreadcrumbsComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  // Function to change Breadcrumbs based on user selection
   async ngOnChanges(): Promise<void> {
 
     if (this.category == '' && this.searchTXT == '') {
@@ -25,6 +26,7 @@ export class BreadcrumbsComponent implements OnInit {
       this.cat = '/' + ' ' + this.category
     } else if (this.category == '' && this.searchTXT != '') {
       this.txt = this.searchTXT;
+      // getting category of the searched product
       await this.productService.getProductCategory(this.searchTXT).then(data => this.cat = '/' + ' ' + data['products'][0].category + ' ' + '/')
     } else {
       this.txt = this.searchTXT;

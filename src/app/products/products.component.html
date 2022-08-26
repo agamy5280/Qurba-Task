@@ -1,14 +1,18 @@
+<!-- Receive emitted value -->
 <app-search-bar class="searchBar" (searchTextChanged)="onSearchTextEntered($event)"></app-search-bar>
 <div class="container">
+  <!-- Passing Category and Searched Text to Breadcrumbs component -->
   <app-breadcrumbs [category]="category" [searchTXT]="searchText"></app-breadcrumbs>
   <div class="grid">
     <div class="filters">
       <strong>Products</strong>
       <div class="filter-items">
-        <app-category-filter (emitter)="send($event)" [searchTXT]="searchText" ></app-category-filter>
+        <!-- Receive emitted value -->
+        <app-category-filter (emitter)="receiveCategory($event)" [searchTXT]="searchText"></app-category-filter>
       </div>
     </div>
-      <app-products-grid [category]="category" [searchTXT]="searchText"></app-products-grid>
+    <!-- Passing Category and Searched Text to products-grid component -->
+    <app-products-grid [category]="category" [searchTXT]="searchText"></app-products-grid>
   </div>
 </div>
 <br><br><br><br><br><br><br><br><br>
