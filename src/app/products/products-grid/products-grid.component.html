@@ -1,6 +1,6 @@
 <div class="grid">
   <ng-container>
-    <div class="col" *ngFor="let product of allProductList">
+    <div class="col" *ngFor="let product of allProductList | paginate: { itemsPerPage:9, currentPage:p} ">
       <img class="img-product" src="{{ product.thumbnail }}" alt="">
       <div class="dc">
         <p> -{{ product.discountPercentage }}% </p>
@@ -19,4 +19,7 @@
       <button class="btn">ADD TO CART</button>
     </div>
   </ng-container>
+</div>
+<div class="pagination">
+  <pagination-controls class="my-pagination" (pageChange)="p = $event" previousLabel="" nextLabel=""> </pagination-controls>
 </div>

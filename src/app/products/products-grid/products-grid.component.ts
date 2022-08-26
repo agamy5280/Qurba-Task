@@ -9,7 +9,7 @@ import { ProductgridService } from 'src/app/services/products-services/productgr
 export class ProductsGridComponent implements OnInit,OnChanges {
   allProductList: any;
   constructor(private productService: ProductgridService) {}
-
+  p:any;
   @Input() category:string
   @Input() searchTXT:string
   ngOnInit(): void {

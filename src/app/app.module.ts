@@ -14,7 +14,7 @@ import { CategoryFilterComponent } from './products/category-filter/category-fil
 import { ProductsGridComponent } from './products/products-grid/products-grid.component';
 import { BreadcrumbsComponent } from './products/breadcrumbs/breadcrumbs.component';
 import { ProductgridService } from './services/products-services/productgrid.service';
-
+import {NgxPaginationModule} from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -35,7 +35,7 @@ import { ProductgridService } from './services/products-services/productgrid.ser
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-
+    NgxPaginationModule,
     
   ],
   providers: [ProductgridService],

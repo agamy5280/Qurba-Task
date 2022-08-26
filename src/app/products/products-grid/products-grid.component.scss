@@ -105,3 +105,23 @@ button:hover {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
+.pagination {
+    margin-top: 72px;
+    text-align: center;
+}
+.my-pagination ::ng-deep .ngx-pagination .current {
+    background: #56D9D9;
+    border-radius: 8px;
+  }
+
+  
+.my-pagination ::ng-deep  .pagination-next a::after, .my-pagination ::ng-deep .pagination-next.disabled::after { 
+    content: '>';
+    font-size: 24px;
+}  
+  
+  
+.my-pagination ::ng-deep .pagination-previous a::before, .my-pagination ::ng-deep .pagination-previous.disabled::before {
+    content: '<';
+    font-size: 24px;
+}
