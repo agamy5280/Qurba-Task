@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, OnChanges } from '@angular/core';
+import { Component } from '@angular/core';
 import { ProductgridService } from 'src/app/services/products-services/productgrid.service';
 import { Router, ActivatedRoute } from '@angular/router';
 
@@ -18,7 +18,7 @@ export class BreadcrumbsComponent {
     private _route: ActivatedRoute,
     private _router: Router
   ){
-    _route.queryParams.subscribe(params => {
+    _route.queryParams.subscribe(() => {
 
       // To update breadcrumbs when toggling between search and selecting checkbox (category)
       const url = new URL(window.location.href);

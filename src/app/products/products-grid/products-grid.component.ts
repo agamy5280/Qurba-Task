@@ -1,4 +1,4 @@
-import {Component, OnChanges, OnInit, SimpleChanges} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { ProductgridService } from 'src/app/services/products-services/productgrid.service';
 import { ActivatedRoute } from "@angular/router";
 

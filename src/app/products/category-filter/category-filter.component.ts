@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Injectable, Input, OnInit, Output, OnChanges } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CategoryfilterService } from 'src/app/services/products-services/categoryfilter.service';
 import { ProductgridService } from 'src/app/services/products-services/productgrid.service';
 import { Router, ActivatedRoute } from '@angular/router';
@@ -19,6 +19,7 @@ export class CategoryFilterComponent implements OnInit {
     private _route: ActivatedRoute,
     private _router: Router
   ) {
+      // If there is no category selected reset index to -1, to make every checkbox unchecked
       _route.queryParams.subscribe(params => {
         if (!params['category']) {
           this.selectedIndex = -1;
@@ -26,6 +27,7 @@ export class CategoryFilterComponent implements OnInit {
       });
     }
 
+    // Requesting categoryList from categoryFilterService
   ngOnInit(): void {
       this.categoryfilter.getCategories().then(() => {
       this.categoriesList = this.categoryfilter.categoriesList;

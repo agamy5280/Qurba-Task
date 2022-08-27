@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -13,6 +13,7 @@ export class SearchBarComponent implements OnInit {
     private _route: ActivatedRoute,
     private _router: Router
   ){
+      // Resetting search bar after done searching
     _route.queryParams.subscribe(params => {
       if (!params['search']) {
         this.enteredSearchValue = '';
@@ -20,17 +21,10 @@ export class SearchBarComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {
-    const url = new URL(window.location.href);
-    const searchParam = url.searchParams.get("search");
-    this.enteredSearchValue = searchParam ?? '';
+  ngOnInit(): void {}
 
-  }
-
-  // Emit searched Text to parent component --> (products.component)
-  @Output() searchTextChanged: EventEmitter<string> = new EventEmitter<string>();
+  // When new search happens navigate to this new search
   onSearchTextChanged() {
-    this.searchTextChanged.emit(this.enteredSearchValue);
     this._router.navigate([], {
       relativeTo: this._route,
       queryParams: {

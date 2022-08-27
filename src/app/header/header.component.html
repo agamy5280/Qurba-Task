@@ -7,11 +7,11 @@
         <li><a href="#">Home</a></li>
       </ul>
     </div>
-
     <div class="right-nav">
       <app-search-bar class="search-bar" [style.visibility]="removeBody"></app-search-bar>
       <a [style.visibility]="removeBody" href="#"><img id="cart" [attr.src]="'assets/images/Cart.png'" alt=""></a>
-      <a id="login" (click)="isLoginClicked()" routerLink="login" *ngIf="!isLogin() || isLogin()">{{ loggingStatus }}</a>
+      <a id="login" (click)="isLoginClicked()" routerLink="login"
+        *ngIf="!isLogin() || isLogin()">{{ loggingStatus }}</a>
     </div>
   </nav>
 </header>
