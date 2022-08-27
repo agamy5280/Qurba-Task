@@ -10,6 +10,51 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
+## Logging in
+
+Please use username and password provided by dummyJson API https://dummyjson.com/docs/auth
+
+Example:
+username: kminchelle   password: 0lelplR
+
+## Screen Shots
+
+Welcome Screen:
+![welcome page](https://user-images.githubusercontent.com/79969562/187006889-77a31117-35cf-4a69-8281-b8ac6496ca42.PNG)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Login Screen:
+![login1](https://user-images.githubusercontent.com/79969562/187006928-5fa70268-75c1-4690-bc73-1df7bd936f41.PNG)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Login Screen Validation:
+![validation](https://user-images.githubusercontent.com/79969562/187007006-7e6129ce-df74-48a4-a2c6-33ec01fa9f21.PNG)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Products Screens:
+![products](https://user-images.githubusercontent.com/79969562/187007060-c9823fa4-0058-4cfd-a5a7-328481fb428d.PNG)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+![50](https://user-images.githubusercontent.com/79969562/187007214-ad8ed1c3-b505-4c8a-9247-36a475cf2584.PNG)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+![60](https://user-images.githubusercontent.com/79969562/187007220-32b4a62f-446f-485e-b2df-10e115aba4c5.PNG)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+![70](https://user-images.githubusercontent.com/79969562/187007227-2b01230a-a069-4f50-9898-404b8e9f9eb4.PNG)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+![80](https://user-images.githubusercontent.com/79969562/187007238-c0cac2f4-4123-4a48-93c7-1fec0887afb8.PNG)
+
+
+
+
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
