@@ -1,14 +1,16 @@
-<!-- Using *ngFor to iterate through each category products or through all products  -->
-<div class="grid">
+<div class="grid" *ngIf="productsQuantity > 0">
   <ng-container>
-                                                                       <!-- Pagination  -->
-    <div class="col" *ngFor="let product of allProductList | paginate: { itemsPerPage:9, currentPage:p} ">
+<!-- Using *ngFor to iterate through each category products or through all products  -->
+    <div class="col" *ngFor="let product of productList | paginate: { itemsPerPage: 9, currentPage: p } ">
       <img class="img-product" src="{{ product.thumbnail }}" alt="">
       <div class="dc">
         <p> -{{ product.discountPercentage }}% </p>
       </div>
       <p id="product-title">{{ product.title }}</p>
-      <p id="product-description">{{ product.description }}.</p>
+      <div id="product-description">
+        {{ product.description }}.
+        <div class="blur-block"></div>
+      </div>
       <div class="product-price">
         <p> <span id="price-dc"><span style="font-weight:bold;">{{ product.price }} </span> <span>USD</span> </span>
           <span style="font-weight:bold;">477.85 </span><span>USD</span></p>
@@ -23,7 +25,9 @@
   </ng-container>
 </div>
 <!-- Pagination Controls  -->
-<div class="pagination">
+<div class="pagination" *ngIf="productsQuantity > 0">
   <pagination-controls class="my-pagination" (pageChange)="p = $event" previousLabel="" nextLabel="">
   </pagination-controls>
+  <div>Total products: {{ productsQuantity }}</div>
 </div>
+<div *ngIf="productsQuantity < 1">Sorry, nothing found.</div>

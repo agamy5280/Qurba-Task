@@ -16,6 +16,16 @@
     margin-left: 16px;
     font-size: 14px;
     color: #344054;
+    height: 46px;
+  overflow: hidden;
+    position: relative;
+}
+.blur-block {
+  height: 34px;
+  width: 100%;
+  position: absolute;
+  bottom: -16px;
+  background: linear-gradient(180deg,hsla(0,0%,100%,0) 0,#fff 60%);
 }
 #product-price{
     margin-right: 14px;
@@ -60,8 +70,7 @@
     color: #344054;
     font-weight: bold;
     background-color: #56D9D9;
-    margin: 16px;
-    
+
 }
 .dc {
     position: absolute;
@@ -82,10 +91,15 @@
 }
 .col {
     width: 282px;
-    height: 580px;
     border: 0.5px solid #424242;
     border-radius: 8px;
     position: relative;
+    padding-bottom: 76px;
+}
+button {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
 }
 button:hover {
     background-color: #4CAF50;
@@ -95,13 +109,13 @@ button:hover {
     display: grid;
     grid-template-columns: repeat(3, 282px);
     grid-gap: 24px;
-    @media(min-width:768px){ 
+    @media(min-width:768px){
         grid-template-columns: 1fr;
     }
-    @media(min-width:960px){ 
+    @media(min-width:960px){
         grid-template-columns: 1fr 1fr;
     }
-    @media(min-width:1200px){ 
+    @media(min-width:1200px){
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
@@ -115,19 +129,19 @@ button:hover {
     font-size: 20px;
   }
 
-.my-pagination ::ng-deep  .pagination-next a::after, .my-pagination ::ng-deep .pagination-next.disabled::after{ 
+.my-pagination ::ng-deep  .pagination-next a::after, .my-pagination ::ng-deep .pagination-next.disabled::after{
     content: '>';
     font-size: 24px;
-}  
-  
+}
+
 .my-pagination ::ng-deep .pagination-previous a::before, .my-pagination ::ng-deep .pagination-previous.disabled::before {
     content: '<';
     font-size: 24px;
 }
 
-.my-pagination ::ng-deep  .pagination-next a:hover, .my-pagination ::ng-deep .pagination-next.disabled:hover{ 
+.my-pagination ::ng-deep  .pagination-next a:hover, .my-pagination ::ng-deep .pagination-next.disabled:hover{
     background-color: #FFFFFF;
-} 
+}
 .my-pagination ::ng-deep .pagination-previous a:hover, .my-pagination ::ng-deep .pagination-previous.disabled:hover {
     content: '<';
     font-size: 24px;

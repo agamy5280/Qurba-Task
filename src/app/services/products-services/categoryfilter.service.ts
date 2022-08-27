@@ -5,16 +5,12 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CategoryfilterService {
+  categoriesList: any = [];
 
-  categoriesNames: any[] = [];
   constructor(private http: HttpClient) { }
 
   // Function to get categories from the API
-  getCategories() {
-    this.http.get('https://dummyjson.com/products/categories').subscribe({
-      next: (data) =>{
-        this.categoriesNames.push(data);
-      }
-    })
+  async getCategories() {
+    this.categoriesList = (await this.http.get('https://dummyjson.com/products/categories').toPromise());
   }
 }

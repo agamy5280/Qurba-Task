@@ -1,14 +1,17 @@
-<nav>
-  <div class="left-nav">
-    <ol>
-      <li><img id="logo-img" [attr.src]="'assets/images/logo.png'" alt=""></li>
-      <li><strong id="logo-name">ClickTik</strong></li>
-      <li><a href="#">Home</a></li>
-    </ol>
-  </div>
-  <ol>
-    <li><a [style.visibility]="!removeBody" href="#"><img id="cart" [attr.src]="'assets/images/Cart.png'" alt=""></a>
-    </li>
-    <a id="login" (click)="isLoginClicked()" routerLink="login" *ngIf="!isLogin() || isLogin()">{{ loggingStatus }}</a>
-  </ol>
-</nav>
+<header class="header">
+  <nav>
+    <div class="left-nav">
+      <ul>
+        <li><img id="logo-img" [attr.src]="'assets/images/logo.png'" alt=""></li>
+        <li><strong id="logo-name">ClickTik</strong></li>
+        <li><a href="#">Home</a></li>
+      </ul>
+    </div>
+
+    <div class="right-nav">
+      <app-search-bar class="search-bar"></app-search-bar>
+      <a [style.visibility]="!removeBody" href="#"><img id="cart" [attr.src]="'assets/images/Cart.png'" alt=""></a>
+      <a id="login" (click)="isLoginClicked()" routerLink="login" *ngIf="!isLogin() || isLogin()">{{ loggingStatus }}</a>
+    </div>
+  </nav>
+</header>

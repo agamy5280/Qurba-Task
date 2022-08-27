@@ -11,10 +11,15 @@ nav {
   position: relative;
   justify-content: space-between;
   text-align: center;
-  padding-top: 24px;
-  padding-left: 112px;
-  padding-right: 130px;
+  padding: 24px 124px 24px 124px;
   border-bottom: 0.5px solid #667085;
+
+  @media(max-width:960px) {
+    padding: 40px 0;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
 
   .left-nav {
     display: flex;
@@ -31,7 +36,7 @@ nav {
     }
   }
 
-  ol {
+  ol, ul {
     display: flex;
     list-style: none;
     margin: auto 0;
@@ -51,3 +56,14 @@ a {
   text-decoration: none;
   color: #667085;
 }
+
+.right-nav {
+  display: flex;
+  align-items: center;
+  grid-gap: 20px;
+}
+
+.header {
+  margin-bottom: 30px;
+}
+

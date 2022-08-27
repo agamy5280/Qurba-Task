@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Injectable, Input, OnInit, Output, OnChanges } from '@angular/core';
 import { CategoryfilterService } from 'src/app/services/products-services/categoryfilter.service';
 import { ProductgridService } from 'src/app/services/products-services/productgrid.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -10,32 +11,36 @@ import { ProductgridService } from 'src/app/services/products-services/productgr
   providers: [ProductgridService]
 })
 export class CategoryFilterComponent implements OnInit {
-  categoriesList: any= [];
-  
-  // Selected index is the given index on the checked box default value = -1 to make all checkboxs unchecked at page load
+  categoriesList: any = [];
   selectedIndex: any = -1;
-  @Input() searchTXT:string
-  
-  constructor(private categoryfilter: CategoryfilterService, private productList: ProductgridService) {}
 
-  //  Requesting categories names from categoryfilterService
+  constructor(
+    private categoryfilter: CategoryfilterService,
+    private _route: ActivatedRoute,
+    private _router: Router
+  ) {
+      _route.queryParams.subscribe(params => {
+        if (!params['category']) {
+          this.selectedIndex = -1;
+        }
+      });
+    }
+
   ngOnInit(): void {
-    this.categoryfilter.getCategories();
-    this.categoriesList = this.categoryfilter.categoriesNames;
+      this.categoryfilter.getCategories().then(() => {
+      this.categoriesList = this.categoryfilter.categoriesList;
+    });
   }
-
-  // Function to emit category selected from checkboxs
-  @Output() emitter:EventEmitter<string> = new EventEmitter<string>();
+  // Function that receive binded values and navigate to requested category route
   changeSelection(event, category, index) {
     category = event.target.checked ? category : '';
     this.selectedIndex = event.target.checked ? index : undefined;
-    this.emitter.emit(category);
-  }
-  
-  // Resetting checked box
-  ngOnChanges() {
-    if(this.searchTXT != '') {
-      this.selectedIndex = -1
-    }
+    this._router.navigate([], {
+      relativeTo: this._route,
+      queryParams: {
+        category: category,
+        // http://localhost:4200/products?category=category
+      },
+    });
   }
 }

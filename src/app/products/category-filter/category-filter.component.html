@@ -1,5 +1,5 @@
-<div class="filter-item" *ngFor="let category of categoriesList[0]; let index = index">
+<div class="filter-item" *ngFor="let category of categoriesList; let index = index">
   <!-- Binding selectedIndex in category-filter component with index of *ngFor  ///  sending category,index and event to check if a given checkbox is selected -->
-  <input type="checkbox" [ngModel]="selectedIndex === index" (change)="changeSelection($event, category, index)">
-  <label>{{ category | titlecase }}</label>
+  <input id="filter-item-{{index}}" name="filter-item-{{index}}" type="checkbox" [ngModel]="selectedIndex === index" (change)="changeSelection($event, category, index)">
+  <label for="filter-item-{{index}}">{{ category | titlecase }}</label>
 </div>
