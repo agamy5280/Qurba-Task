@@ -12,8 +12,7 @@ export class AuthGuard implements CanActivate {
 
   // Authenticating Routing Guard
   canActivate(){
-    // return this.authService.isAuthenticated;
-    return true;
+    return this.authService.isAuthenticated;
   }
   
 }
